@@ -1,0 +1,23 @@
+## record
+r|CX
+## block
+b|CX
+v|f1
+v|f2
+v|f3
+I|ID
+I|ADDR
+Z|QWERTY
+## block
+b|ID
+v|id
+v|name
+## block
+b|ADDR
+v|city
+v|zip
+I|PHONE
+## block
+b|PHONE
+v|type
+v|number
