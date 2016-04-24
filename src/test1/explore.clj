@@ -41,3 +41,20 @@
    (group-by #(nth % 0) block-children)))
 
 (block-transform testv)
+
+; exploration of namespaces
+
+(repl/dir clojure.pprint)
+(repl/dir clojure.core)
+
+(ns-publics 'clojure.pprint)
+(keys (ns-publics 'clojure.pprint))
+
+(ns-map 'clojure.pprint)
+(ns-interns 'clojure.pprint)
+(ns-publics 'clojure.pprint)
+(ns-imports 'clojure.pprint)
+
+(ns-imports *ns*)
+
+(ns-aliases *ns*)

@@ -57,3 +57,5 @@
  (insta/transform
   {:block (fn [& args] (test1.explore/block-transform (seq args)))}
   (cda-parse0 cda4)))
+
+(ns-aliases *ns*)
