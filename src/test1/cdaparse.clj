@@ -27,7 +27,8 @@
   (insta/parser
    "CDA = record (block)*
         record = <ws> <'r'> <ws> <'|'> <ws> name <ws> <'|'> <ws> remark <eol>*
-        block = <ws> <'b'> <ws> <'|'> <ws> name <ws> <'|'> <ws> remark <eol>* (value)*
+        block = <ws> <'b'> <ws> <'|'> <ws> name <ws> <'|'> <ws> remark <eol>* values
+        values = (value)*
         value = <ws> <'v'> <ws> <'|'> <ws> name <ws> <'|'> <ws> remark <eol>*
         name = #'[a-zA-Z\\+-]([0-9a-zA-Z\\+-]*)'
         remark = #'[^|^\\r^\\n.]*'
