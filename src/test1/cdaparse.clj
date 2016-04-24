@@ -20,7 +20,7 @@
   "r|ZX|root record Z \r
     b|ZX|block ZZ \r
     v|Field1 | this is field 1 \r
-    v|Field2 | this is field 2 \r
+    v|Field2     | this is field 2 \r
     b|YX|block YX")
 
 (def cda-parse0
@@ -40,3 +40,19 @@
 (cda-parse0 cda2)
 (ppr/pprint (cda-parse0 cda3))
 (ppr/pprint (cda-parse0 cda4))
+
+(ppr/pprint (cda-parse0 cda4))
+(insta/transform
+ {:value (fn [& nodes] [:values (vec nodes)])}
+ (cda-parse0 cda4))
+
+; this is not what we want, we want to transform one level up
+(ppr/pprint
+ (insta/transform
+  {:value (fn [& nodes] [:values (vec nodes)])}
+  (cda-parse0 cda4)))
+
+(ppr/pprint
+ (insta/transform
+  {:block (fn [& args] (test1.explore/block-transform (seq args)))}
+  (cda-parse0 cda4)))
