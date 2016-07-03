@@ -7,5 +7,7 @@
                  [lein-cljfmt "0.3.0"]
                  [clj-fuzzy "0.1.8"]
                  [me.raynes/fs "1.4.6"]
-                 [instaparse "1.4.1"]]
+                 [instaparse "1.4.1"]
+                 [clj-time "0.11.0"]
+                 [prismatic/schema "1.1.1"]]
     :plugins [[lein-cljfmt "0.3.0"]])

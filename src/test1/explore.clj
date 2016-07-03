@@ -58,3 +58,8 @@
 (ns-imports *ns*)
 
 (ns-aliases *ns*)
+
+(require '[clj-time.core :as t])
+
+(t/date-time 1986 10 14 4 3 27 456)
+(ppr/pprint (t/date-time 1986 10 14 4 3 27 456))

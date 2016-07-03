@@ -53,9 +53,10 @@
   {:value (fn [& nodes] [:values (vec nodes)])}
   (cda-parse0 cda4)))
 
-(ppr/pprint
- (insta/transform
-  {:block (fn [& args] (test1.explore/block-transform (seq args)))}
-  (cda-parse0 cda4)))
+(comment
+  (ppr/pprint
+   (insta/transform
+    {:block (fn [& args] (test1.explore/block-transform (seq args)))}
+    (cda-parse0 cda4))))
 
 (ns-aliases *ns*)
